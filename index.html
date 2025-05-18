@@ -7,48 +7,67 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: #000000;
+            color: #ffffff;
             margin: 0;
             padding: 0;
         }
 
         .container {
-            max-width: 900px;
-            margin: 60px auto;
+            max-width: 1000px;
+            margin: 50px auto;
             padding: 20px;
-            text-align: center;
         }
 
-        h1 {
-            font-size: 3em;
-            color: #0073e6;
+        h1, h2 {
+            color: #1e90ff;
         }
 
         p {
-            font-size: 1.2em;
-            margin: 20px 0;
+            font-size: 1.1em;
+            line-height: 1.6;
         }
 
         ul {
-            list-style: none;
+            list-style-type: none;
             padding: 0;
-            font-size: 1em;
         }
 
-        ul li {
-            margin: 10px 0;
+        ul li::before {
+            content: "✔️ ";
+            margin-right: 8px;
         }
 
-        .highlight {
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #1e90ff;
+            text-decoration: none;
+            border-radius: 5px;
             font-weight: bold;
-            color: #005bb5;
+        }
+
+        .button:hover {
+            background-color: #0d6efd;
         }
 
         .footer {
-            margin-top: 40px;
+            text-align: center;
             font-size: 0.9em;
-            color: #777;
+            color: #999;
+            margin-top: 60px;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+        }
+
+        hr {
+            border: 1px solid #333;
         }
     </style>
 </head>
@@ -57,20 +76,34 @@
         <h1>Welcome to Docker!</h1>
         <p>Your containerized future starts here 🚀</p>
 
-        <p>This is a simple static website running inside a Docker container. Use this as your starting point to build and scale your web apps easily.</p>
+        <div class="section">
+            <h2>🌐 Introduction</h2>
+            <p>This website is running from within a Docker container — a lightweight, standalone, and executable package of software that includes everything needed to run an application.</p>
+        </div>
 
-        <h2 class="highlight">Why Docker?</h2>
-        <ul>
-            <li>⚙️ Consistent environments across development and production</li>
-            <li>📦 Lightweight and portable containers</li>
-            <li>🚀 Easy to deploy and scale applications</li>
-            <li>🔐 Isolated and secure environments</li>
-        </ul>
+        <div class="section">
+            <h2>🔧 Key Features</h2>
+            <ul>
+                <li>Consistent environments across platforms</li>
+                <li>Rapid application deployment and scaling</li>
+                <li>Lightweight virtualization using containers</li>
+                <li>Microservice and DevOps ready</li>
+            </ul>
+        </div>
 
-        <p class="highlight">Start customizing this page with your own HTML, CSS, and JS content.</p>
+        <div class="section">
+            <h2>🚀 Getting Started</h2>
+            <p>To customize this application:</p>
+            <ul>
+                <li>Edit the <code>index.html</code> file inside your Docker container.</li>
+                <li>Use your own HTML, CSS, or JS files to create a full-featured web application.</li>
+                <li>Mount a volume to make updates easier during development.</li>
+            </ul>
+            <a class="button" href="https://docs.docker.com/get-started/" target="_blank">Learn More at Docker Docs</a>
+        </div>
 
         <div class="footer">
-            &copy; 2025 Docker Static App. All rights reserved.
+            &copy; 2025 Docker Static App. Built with ❤️ inside a container.
         </div>
     </div>
 </body>
